@@ -1,0 +1,6 @@
+# Ignore the following files
+*.~
+
+# Ignore CMake/QT temp and build files
+*.txt.user*
+**/build/*
