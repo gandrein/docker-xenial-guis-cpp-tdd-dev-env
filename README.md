@@ -32,7 +32,7 @@ Both examples are available in the resulting Docker containers.
 
 ### Building the image
 
-The [Makefile](Makefile) contained in the repository allows you to create docker images for the target platform you are interested in NVIDIA/nonNVIDIA. In a terminal type `make` followed by a `<TAB>` to see the available auto-complete options. 
+The [Makefile](./docker/Makefile) contained in the repository allows you to create docker images for the target platform you are interested in NVIDIA/nonNVIDIA. In a terminal type `make` followed by a `<TAB>` to see the available auto-complete options. 
 ```
 make <TAB>
 ```
@@ -46,7 +46,7 @@ command, after you have build it with the `make` instruction.
 You could also change the names in the `Makefile`. However, make sure you do not break the dependencies between the two images as the second image (for NVIDIA platform) depends on the first. 
 
 #### The ENTRYPOINT `entrypoint.sh` script
-For each image type, the bash script [entrypoint.sh](./entrypoint.sh) will be copied at build time into the Docker image and will be ran as the default _entrypoint_ when the container is launched. 
+For each image type, the bash script [entrypoint.sh](./docker/entrypoint.sh) will be copied at build time into the Docker image and will be ran as the default _entrypoint_ when the container is launched. 
 
 The current entrypoint script is customized for the use case where the host's QT Creator folder is mounted into the container at `$HOME/Qt` folder of the `non-root` user. 
 
